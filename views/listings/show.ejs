@@ -6,7 +6,7 @@
   <div class="col-8 offset-3">
     <h3><%= listing.title %></h3>
   </div>
-  <div class="card col-6 offset-3 show-card listing-card">
+  <div class="card col-6 offset-3 show-card listing-card util-card">
     <img
       src="<%= listing.image.url %>"
       class="card-img-top show-img"
@@ -38,7 +38,7 @@
   </form>
 </div>
 <% } %>
-<div class="col-8 offset-3 mb-3">
+<div class="col-8 offset-3 mb-3 util-card">
   <hr />
   <% if (currUser) { %>
   <h4>Leave a Review</h4>
@@ -98,29 +98,29 @@
           <label for="first-rate5" title="Amazing">5 stars</label>
         </fieldset>
       </div>
-    </div>
-    <div class="mb-3 mt-3">
-      <label for="comment" class="form-label">Comments</label>
-      <textarea
+      <div class="mb-3 mt-3">
+        <label for="comment" class="form-label">Comments</label>
+        <textarea
         class="form-control"
         name="review[comment]"
         id="comment"
         cols="30"
         rows="5"
         required
-      ></textarea>
-      <div class="invalid-feedback">Please Add some Comments</div>
-    </div>
-    <div class="mb-3 mt-3">
-      <button class="btn btn-outline-dark">Submit</button>
-    </div>
-  </form>
+        ></textarea>
+        <div class="invalid-feedback">Please Add some Comments</div>
+      </div>
+      <div class="mb-3 mt-3">
+        <button class="btn btn-outline-dark">Submit</button>
+      </div>
+    </form>
+  </div>
   <% } %>
   <hr />
   <% if (listing.reviews.length > 0) { %>
 
-  <p><b>All Reviews</b></p>
-  <div class="row card-container">
+  <div class="row ">
+    <p><b>All Reviews</b></p>
     <% for(review of listing.reviews){ %>
     <div class="card col-5 ms-3 mb-3">
       <div class="card-body mb-3">
@@ -147,6 +147,7 @@
   </div>
   <% } %>
 </div>
+<hr />
 <div class="col-8 offset-3 mb-3 map-container">
   <h3>Where you'll be</h3>
   <div id="map"></div>

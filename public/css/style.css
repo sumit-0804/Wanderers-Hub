@@ -157,4 +157,9 @@ body {
   .card {
     width: 75%;
   }
+
+  .listing-card,
+  .util-card {
+    margin-left: 2rem;
+  }
 }
