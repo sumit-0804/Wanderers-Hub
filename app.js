@@ -80,8 +80,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/demouser", async (req, res) => {});
-
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);

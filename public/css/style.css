@@ -113,6 +113,48 @@ body {
   color: orange;
 }
 #map {
-  height: 400px;
+  height: 300px;
   width: 80vh;
+}
+#filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.filter {
+  text-align: center;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  opacity: 0.7;
+  font-size: 1rem;
+}
+.filter:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.filter p {
+  font-size: 1rem;
+}
+.tax-info {
+  display: none;
+}
+
+@media screen and (width<= 800px) {
+  #filters {
+    flex-wrap: nowrap;
+    overflow: auto;
+    scroll-behavior: smooth;
+  }
+  #map {
+    width: 20rem;
+    margin: auto;
+  }
+  .map-container {
+    margin: 0;
+    margin-left: 0.5rem;
+  }
+
+  .card {
+    width: 75%;
+  }
 }
