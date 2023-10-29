@@ -1,0 +1,82 @@
+<% layout("layouts/boilerplate.ejs") -%>
+<div class="row">
+  <div class="col-8 offset-2">
+    <h3>Edit Your Listing</h3>
+    <form
+      method="post"
+      action="/listings/<%= listing._id %>?_method=PUT"
+      enctype="multipart/form-data"
+    >
+      <div>
+        <label for="title" class="form-label">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          name="listing[title]"
+          value="<%= listing.title %>"
+        />
+      </div>
+      <br />
+      <div>
+        <label class="form-label" for="description">Description</label>
+        <textarea
+          type="text"
+          name="listing[description]"
+          rows="5"
+          cols="40"
+          class="form-control"
+          style="resize: none"
+        >
+    <%= listing.description %>
+     </textarea
+        >
+      </div>
+
+      <br />
+      <div class="mb-3">
+        Orignal Listing Image<br />
+        <img class="img-rounded" src="<%= ogURL %>" alt="..." />
+      </div>
+      <div>
+        <label for="image" class="form-label">New Image</label>
+        <input type="file" class="form-control" name="listing[image]" />
+      </div>
+      <br />
+
+      <div class="row">
+        <div class="col-md-4">
+          <label for="price" class="form-label">Price</label>
+          <input
+            type="number"
+            class="form-control"
+            name="listing[price]"
+            value="<%= listing.price %>"
+          />
+        </div>
+        <div class="col-md-8">
+          <label for="country" class="form-label">Country</label>
+          <input
+            class="form-control"
+            type="text"
+            name="listing[country]"
+            value="<%= listing.country %>"
+          />
+        </div>
+      </div>
+      <br />
+      <div>
+        <label for="location" class="form-label">Location</label>
+        <input
+          type="text"
+          name="listing[location]"
+          class="form-control"
+          value="<%= listing.location %>"
+        />
+      </div>
+      <br />
+      <button class="btn btn-dark edit-btn">Edit</button>
+      <br />
+      <br />
+    </form>
+  </div>
+</div>
