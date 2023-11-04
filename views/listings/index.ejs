@@ -1,50 +1,50 @@
 <% layout("layouts/boilerplate.ejs") -%>
 <!-- <h3>All Listings</h3> -->
 <div id="filters">
-  <div class="filter">
+  <a href="/listings?q=trending" class="filter">
     <div><i class="fa-solid fa-fire"></i></div>
     <p>Trending</p>
-  </div>
-  <div class="filter">
+  </a>
+  <a href="/listings?q=rooms" class="filter">
     <div><i class="fa-solid fa-bed"></i></div>
     <p>Rooms</p>
-  </div>
-  <div class="filter">
+  </a>
+  <a href="/listings?q=iconic cities" class="filter">
     <div><i class="fa-solid fa-mountain-city"></i></div>
     <p>Iconic Cities</p>
-  </div>
-  <div class="filter">
+  </a>
+  <a href="/listings?q=mountain" class="filter">
     <div><i class="fa-solid fa-mountain"></i></div>
     <p>Mountain</p>
-  </div>
-  <div class="filter">
+  </a>
+  <a href="/listings?q=castles" class="filter">
     <div><i class="fa-brands fa-fort-awesome"></i></div>
     <p>Castles</p>
-  </div>
-  <div class="filter">
+  </a>
+  <a href="/listings?q=pools" class="filter">
     <div><i class="fa-solid fa-person-swimming"></i></div>
     <p>Amazing Pools</p>
-  </div>
-  <div class="filter">
+  </a>
+  <a href="/listings?q=camping" class="filter">
     <div><i class="fa-solid fa-campground"></i></div>
     <p>Camping</p>
-  </div>
-  <div class="filter">
+  </a>
+  <a href="/listings?q=farms" class="filter">
     <div><i class="fa-solid fa-cow"></i></div>
     <p>Farms</p>
-  </div>
-  <div class="filter">
+  </a>
+  <a href="/listings?q=arctic" class="filter">
     <div><i class="fa-solid fa-snowflake"></i></div>
     <p>Arctic</p>
-  </div>
-  <div class="filter">
+  </a>
+  <a href="/listings?q=domes" class="filter">
     <div><i class="fa-solid fa-igloo"></i></div>
     <p>Domes</p>
-  </div>
-  <div class="filter">
+  </a>
+  <a href="/listings?q=yacht" class="filter">
     <div><i class="fa-solid fa-ship"></i></div>
     <p>Yacht</p>
-  </div>
+  </a>
 </div>
 <div class="row row-cols-lg-3 row-cols-md-3 mt-3 row-cols-sm-1">
   <% for (let listings of allListings) { %>

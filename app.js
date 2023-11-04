@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 const methodOverride = require("method-override");
 const dbURL = process.env.ATLASDB_URL;
+// const dbURL = "mongodb://127.0.0.1:27017/wanderlust";
 const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError.js");
 const session = require("express-session");

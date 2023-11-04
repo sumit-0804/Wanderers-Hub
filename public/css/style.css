@@ -92,8 +92,8 @@ body {
 /* New Page & Edit Page */
 .add-btn,
 .edit-btn {
-  background-color: #fe424d;
-  border: none;
+  background-color: #fe424d !important;
+  border: none !important;
 }
 
 /* Show Page */
@@ -122,6 +122,8 @@ body {
   align-items: center;
 }
 .filter {
+  text-decoration: none;
+  color: #222;
   text-align: center;
   margin-right: 2rem;
   margin-top: 2rem;

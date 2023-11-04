@@ -42,7 +42,27 @@
         <input type="file" class="form-control" name="listing[image]" />
       </div>
       <br />
-
+      <div class="mt-3">
+        <label for="image" class="form-label">Select Categories: </label>
+        <select
+          name="listing[categories]"
+          class="selectpicker form-control"
+          multiple
+          aria-label="size 1"
+        >
+          <option value="trending">Trending</option>
+          <option value="rooms">Rooms</option>
+          <option value="Iconic Cities">Iconic Cities</option>
+          <option value="Mountain">Mountain</option>
+          <option value="Castles">Castles</option>
+          <option value="Pools">Amazing Pools</option>
+          <option value="Camping">Camping</option>
+          <option value="Farms">Farms</option>
+          <option value="Arctic">Arctic</option>
+          <option value="Domes">Domes</option>
+          <option value="Yacht">Yacht</option>
+        </select>
+      </div>
       <div class="row">
         <div class="col-md-4">
           <label for="price" class="form-label">Price</label>
