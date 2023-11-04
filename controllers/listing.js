@@ -74,6 +74,11 @@ module.exports.updateListing = async (req, res) => {
     })
     .send();
   let listing = await Listing.findByIdAndUpdate(id, { ...req.body.listing });
+  let categories = req.body.listing.categories;
+  if (typeof categories === "object") {
+    categories = categories.map((e) => e.toLowerCase());
+  }
+  listing.categories = categories;
   listing.geometry = response.body.features[0].geometry;
   if (typeof req.file !== "undefined") {
     let url = req.file.path;

@@ -92,8 +92,8 @@ body {
 /* New Page & Edit Page */
 .add-btn,
 .edit-btn {
-  background-color: #fe424d !important;
-  border: none !important;
+  background-color: #fe424d;
+  border: none;
 }
 
 /* Show Page */
@@ -153,7 +153,7 @@ body {
   }
   .map-container {
     margin: 0;
-    margin-left: 0.5rem;
+    margin-left: -0.65rem;
   }
 
   .card {
@@ -163,5 +163,12 @@ body {
   .listing-card,
   .util-card {
     margin-left: 2rem;
+  }
+  .edit-btn {
+    margin-left: 8.33%;
+  }
+  .title {
+    margin-left: 16.67%;
+    width: 75%;
   }
 }
