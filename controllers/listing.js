@@ -40,7 +40,7 @@ module.exports.createListing = async (req, res) => {
   let url = req.file.path;
   let filename = req.file.filename;
   let categories = req.body.listing.categories;
-  if (categories) {
+  if (typeof categories == "object") {
     categories = categories.map((e) => e.toLowerCase());
   }
   const newListing = new Listing(req.body.listing);
