@@ -13,6 +13,13 @@
       alt="..."
     />
     <div class="card-body">
+      <% if(typeof listing.categories == "object"){ %> 
+        <% for(let category of listing.categories){ %>
+          <span class="card-text"><%= "#"+category.toUpperCase() %></span>
+          <% } %>
+          <% }else { %>
+            <p class="card-text"></p><%= listing.categories %></p>
+        <% } %>  
       <p class="card-text">
         <br />Owned by <i><%= listing.owner.username %></i>
       </p>
